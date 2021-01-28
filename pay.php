@@ -46,7 +46,7 @@
 		ksort($post_data);
 		$sign_content = "";
 		foreach ($post_data as $name => $value) {
-			if ($value != null && $value != '') {
+			if ($value != null && $value != '' && $name != 'payer') {
 				$sign_content .=  $name . '=' . $value.'&';
 			}
 		}
